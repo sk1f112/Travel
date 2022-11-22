@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&family=Red+Hat+Text:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <title>Travel</title>
+</head>
+
+<body>
+    <div class="content__wrapper">
+        <header class="header anim no_hide">
+            <div class="container header__container">
+                <div class="header__logo">
+                    <a href="#"><img src="./assets/logo.svg" alt="logo" class="logo__img"></a>
+                    <h2 class="logo__text"><a href="#" class="logo__link">Travel Portal</a></h2>
+                </div>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__list-item"><a href="#" class="nav__link">How It Works</a></li>
+                        <li class="nav__list-item"><a href="#" class="nav__link">Plan Your Trip</a></li>
+                        <li class="nav__list-item"><a href="#" class="nav__link">Destinations</a></li>
+                        <li class="nav__list-item"><a href="#" class="nav__link">Travel Stories</a></li>
+                        <li class="nav__list-item hiden"><a href="#" class="nav__link">Account</a></li>
+                        <li class="nav__list-item hiden"><a href="#" class="nav__link">Social Media</a></li>
+                    </ul>
+                    <div class="header__shadow"></div>
+                </nav>
+                <div class="header__wrapper">
+                    <button class="btn btn__header">Login</button>
+                    <div class="burger">
+                        <div class="line"></div>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <main class="main">
+            <section class="section__hero">
+                <div class="container hero__container">
+                    <div class="hero__content">
+                        <h3 class="hero__title anim">Explore the beauty of the World</h3>
+                        <h3 class="hero__subtitle anim">Receive personalized recommendations for countries, hotels,
+                            activities and more</h3>
+                        <form action="#" class="hero__form anim">
+                            <input type="text" placeholder="What would you like to do?" class="hero__form-input">
+                            <button class="btn hero__form-btn">Start Planning</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section class="section__steps">
+                <div class="container">
+                    <h2 class="section__header">3 STEPS TO THE PERFECT TRIP</h2>
+                    <div class="steps__container">
+                        <div class="steps__item">
+                            <div class="steps__content">
+                                <img src="./assets/step1.svg" alt="icon" class="steps__item-img anim">
+                                <p class="steps__item-text anim">Tell us what you want to do</p>
+                            </div>
+                        </div>
+                        <div class="steps__item">
+                            <div class="steps__content">
+                                <img src="./assets/step2.svg" alt="icon" class="steps__item-img anim">
+                                <p class="steps__item-text anim">Share us preferable dates </p>
+                            </div>
+                        </div>
+                        <div class="steps__item">
+                            <div class="steps__content">
+                                <img src="./assets/step3.svg" alt="icon" class="steps__item-img anim">
+                                <p class="steps__item-text anim">We will give you recommendations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section__swiper">
+                <h2 class="section__header">POPULAR DESTINATIONS</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="swiper__container">
+                                <img src="./assets/SPAIN.png" alt="img" class="swiper__img" id="slide1">
+                                <p class="swiper__text">SPAIN</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper__container">
+                                <img src="./assets/Japan.png" alt="img" class="swiper__img" id="slide2">
+                                <p class="swiper__text">JAPAN</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="swiper__container">
+                                <img src="./assets/USA.png" alt="img" class="swiper__img" id="slide3">
+                                <p class="swiper__text">USA</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper__pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <button class="btn btn__arrow"><svg width="36" height="23" viewBox="0 0 36 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.5 11.5C0.5 11.1685 0.631696 10.8505 0.866116 10.6161C1.10054 10.3817 1.41848 10.25 1.75 10.25H31.2325L23.365 2.38499C23.1303 2.15028 22.9984 1.83193 22.9984 1.49999C22.9984 1.16805 23.1303 0.849708 23.365 0.614992C23.5997 0.380275 23.9181 0.248413 24.25 0.248413C24.5819 0.248413 24.9003 0.380275 25.135 0.614992L35.135 10.615C35.2514 10.7311 35.3438 10.869 35.4068 11.0209C35.4698 11.1728 35.5022 11.3356 35.5022 11.5C35.5022 11.6644 35.4698 11.8272 35.4068 11.9791C35.3438 12.1309 35.2514 12.2689 35.135 12.385L25.135 22.385C24.9003 22.6197 24.5819 22.7516 24.25 22.7516C23.9181 22.7516 23.5997 22.6197 23.365 22.385C23.1303 22.1503 22.9984 21.8319 22.9984 21.5C22.9984 21.1681 23.1303 20.8497 23.365 20.615L31.2325 12.75H1.75C1.41848 12.75 1.10054 12.6183 0.866116 12.3839C0.631696 12.1495 0.5 11.8315 0.5 11.5V11.5Z"
+                            fill="white" />
+                    </svg>Find More
+                </button>
+            </section>
+            <section class="section__stories">
+                <h2 class="section__header stories__header">TRAVEL STORIES</h2>
+                <div class="container">
+                    <div class="stories__container">
+                        <div class="stories__item anim anim__show">
+                            <div class="stories__img">
+                                <img src="./assets/travel1.png" alt="img" class="stories__image" id="pic1">
+                            </div>
+                            <div class="stories__text">
+                                <h3 class="stories__title">10 Photos of Attractive Thailand</h3>
+                                <p class="stories__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                    veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit anim
+                                    id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <p class="stories__more"><a href="#">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="stories__item anim anim__show">
+                            <div class="stories__img">
+                                <img src="./assets/travel2.png" alt="img" class="stories__image" id="pic2">
+                            </div>
+                            <div class="stories__text">
+                                <h3 class="stories__title">Canyonlands National Park, Utah</h3>
+                                <p class="stories__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                    aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit
+                                    anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <p class="stories__more"><a href="#">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="stories__item anim anim__show">
+                            <div class="stories__img">
+                                <img src="./assets/travel3.png" alt="img" class="stories__image" id="pic3">
+                            </div>
+                            <div class="stories__text">
+                                <h3 class="stories__title">I left my heart in the Mountains!</h3>
+                                <p class="stories__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                    nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor
+                                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                    Excepteur sint
+                                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                    est laborum.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <p class="stories__more"><a href="#">Read More</a></p>
+                            </div>
+                        </div>
+                        <div class="stories__item anim anim__show">
+                            <div class="stories__img">
+                                <img src="./assets/travel4.png" alt="img" class="stories__image" id="pic4">
+                            </div>
+                            <div class="stories__text">
+                                <h3 class="stories__title">The Longest journey in my life!</h3>
+                                <p class="stories__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis
+                                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                    aute irure
+                                    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                    pariatur.
+                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                    mollit
+                                    anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                                <p class="stories__more"><a href="#">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn__arrow">
+                        <svg width="36" height="23" viewBox="0 0 36 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.5 11.5C0.5 11.1685 0.631696 10.8505 0.866116 10.6161C1.10054 10.3817 1.41848 10.25 1.75 10.25H31.2325L23.365 2.38499C23.1303 2.15028 22.9984 1.83193 22.9984 1.49999C22.9984 1.16805 23.1303 0.849708 23.365 0.614992C23.5997 0.380275 23.9181 0.248413 24.25 0.248413C24.5819 0.248413 24.9003 0.380275 25.135 0.614992L35.135 10.615C35.2514 10.7311 35.3438 10.869 35.4068 11.0209C35.4698 11.1728 35.5022 11.3356 35.5022 11.5C35.5022 11.6644 35.4698 11.8272 35.4068 11.9791C35.3438 12.1309 35.2514 12.2689 35.135 12.385L25.135 22.385C24.9003 22.6197 24.5819 22.7516 24.25 22.7516C23.9181 22.7516 23.5997 22.6197 23.365 22.385C23.1303 22.1503 22.9984 21.8319 22.9984 21.5C22.9984 21.1681 23.1303 20.8497 23.365 20.615L31.2325 12.75H1.75C1.41848 12.75 1.10054 12.6183 0.866116 12.3839C0.631696 12.1495 0.5 11.8315 0.5 11.5V11.5Z"
+                                fill="white" />
+                        </svg>
+                        See More
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container footer__container">
+                <div class="footer__data">
+                    <p class="footer_text">Created by <a href="https://github.com/sk1f112" class="github">NINI</a></p>
+                </div>
+                <div class="footer__text">
+                    All Rights Reserved © Travel Portal
+                </div>
+                <div class="footer__links">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link"><img src="./assets/inst.svg"
+                                    alt="inst"></a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"><img src="./assets/youtube.svg"
+                                    alt="youtube"></a></li>
+                        <li class="footer__item"><a href="#" class="footer__link"><img src="./assets/twitter.svg"
+                                    alt="twitter"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
