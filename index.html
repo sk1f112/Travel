@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,14 +30,15 @@
                         <li class="nav__list-item"><a href="#" class="nav__link">How It Works</a></li>
                         <li class="nav__list-item"><a href="#" class="nav__link">Plan Your Trip</a></li>
                         <li class="nav__list-item"><a href="#" class="nav__link">Destinations</a></li>
-                        <li class="nav__list-item"><a href="#" class="nav__link">Travel Stories</a></li>
+                        <li class="nav__list-item"><a href="#" class="nav__link">Travel Stories</a>
+                        </li>
                         <li class="nav__list-item hiden"><a href="#" class="nav__link">Account</a></li>
                         <li class="nav__list-item hiden"><a href="#" class="nav__link">Social Media</a></li>
                     </ul>
                     <div class="header__shadow"></div>
                 </nav>
                 <div class="header__wrapper">
-                    <button class="btn btn__header">Login</button>
+                    <button class="btn btn__header" onclick="modalActive('login')">Login</button>
                     <div class="burger">
                         <div class="line"></div>
                     </div>
@@ -46,7 +47,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="section__hero">
+            <section class="section section__hero">
                 <div class="container hero__container">
                     <div class="hero__content">
                         <h3 class="hero__title anim">Explore the beauty of the World</h3>
@@ -59,7 +60,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section__steps">
+            <section class="section section__steps">
                 <div class="container">
                     <h2 class="section__header">3 STEPS TO THE PERFECT TRIP</h2>
                     <div class="steps__container">
@@ -84,7 +85,7 @@
                     </div>
                 </div>
             </section>
-            <section class="section__swiper">
+            <section class="section section__swiper">
                 <h2 class="section__header">POPULAR DESTINATIONS</h2>
                 <!-- Slider main container -->
                 <div class="swiper">
@@ -124,7 +125,7 @@
                     </svg>Find More
                 </button>
             </section>
-            <section class="section__stories">
+            <section class="section section__stories">
                 <h2 class="section__header stories__header">TRAVEL STORIES</h2>
                 <div class="container">
                     <div class="stories__container">
@@ -239,6 +240,14 @@
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="shadow"></div>
+    <div class="popup">
+        <div class="popup__container">
+            <div class="popup__content">
+
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
