@@ -192,11 +192,7 @@ function modalActive(modalType){
       `
   } 
   if(modalType == 'reg'){
-    if(document.querySelector('.popup__content')){
     popupContainer.removeChild(document.querySelector('.popup__content'))
-
-    }
-
     html = `
     <div class="popup__content">
       <h2 class="popup__title">Create account</h2>
@@ -219,8 +215,6 @@ function modalActive(modalType){
     `
   }
   popupContainer.insertAdjacentHTML('afterbegin',html)
-
-
   if(!modal.classList.contains('active')){
     modal.classList.add('active');
     modalShadow.classList.add('active'); 
