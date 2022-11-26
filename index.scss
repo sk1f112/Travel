@@ -100,18 +100,20 @@ body {
 .header {
     background: rgba(242, 120, 92, 0.7);
     box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
-    
-    
     opacity: 0;
-    transition: all 0.5s ease 0s; 
-
     &._active{
-        
         opacity: 1;
     }
-
     @include adaptiv-value('padding-top', 25, 10, 1);
     @include adaptiv-value('padding-bottom', 25, 10, 1);
+    &.fixed{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
     @media (max-width: 391px) {
         background: none;
         box-shadow: none;
@@ -159,6 +161,11 @@ body {
 }
 
 .nav{ 
+    &__link{
+        &.active{
+            color: #0D606F;
+        }
+    }
     &__list {
         display: flex;
         gap: 42px;
@@ -881,6 +888,239 @@ body {
     color: #ffffff;
     text-decoration: none;
 }
+//Modal
+.popup {
+    display: none;
+    &.active{
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+        min-width: 650px;
+        z-index: 999;
+    }
+    
+    // .popup__container
 
+    &__container {
+        margin: 0 auto;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
 
+    // .popup__title
 
+    &__title {
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 38px;
+        color: #0D606F;
+        text-align: center;
+        margin: 0;
+    }
+
+    // .popup__loggin
+
+    &__loggin {
+
+        // .popup__loggin-first
+
+        &-first {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    // .popup__facebook
+
+    &__facebook {
+        background: #1877F2;
+        box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+        text-decoration: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    // .popup__google
+
+    &__google {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #0D606F;
+        text-decoration: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    // .popup__or
+
+    &__or {
+        position: relative;
+        margin-top: 15px;
+        // .popup__or-text
+
+        &-text {
+            font-family: 'Aleo';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            margin: 0;
+            color: rgba(13, 96, 111, 0.5);
+        }
+    }
+
+    // .popup__line
+
+    &__line {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 2px;
+        z-index: -1;
+        background: rgba(13, 96, 111, 0.5);
+        &.forgot{
+            top: 36px;
+        }
+        &.reg{
+            top: -15px;   
+        }
+    }
+
+    // .popup__inputs
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+}
+.modal {
+    &__footer{
+        text-align: center;
+        position: relative;
+        margin-top: 10px;
+    }
+    // .modal__btn
+    &__btn {
+        font-family: 'Red Hat Text';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 26px;
+        color: #FFFFFF;
+        background: #0D606F;
+        box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+        border-radius: 10px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        cursor: pointer;
+
+    }
+    // .modal__forgot
+    &__forgot { 
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        text-decoration-line: underline;
+        color: #0D606F;
+        text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    }
+    // .modal__text
+    &__text {
+        text-align: center;
+        font-family: 'Aleo';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 18px;
+        color: rgba(13, 96, 111, 0.5);
+        text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+        margin-top: 40px;
+    }
+    // .modal__register
+    &__register {
+        color: rgba(13, 96, 111, 1)
+    }
+}
+.input{
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    height: 54px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+    padding-left: 10px;
+    outline: none;
+}
+
+.inputs__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label{
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+.shadow{
+    opacity: 0;
+    transition: all ease 0.3s;
+    &.active{
+        opacity: 1;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 900;
+    }
+    
+}
